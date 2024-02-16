@@ -1,0 +1,37 @@
+// Importing partials (just for fun, this partial has a mixin)
+@import '_mixinsPartial';
+
+.one {
+    // USE imported mixin:
+    @include myBox(blue,white);
+}
+
+// DEFINING A MIXIN
+@mixin circle($diameter, $color){
+    height: $diameter;
+    width: $diameter;
+    background-color: $color;
+    border-radius: 50%;
+}
+
+.circleOne{
+    // USING A MIXIN:
+    // Think of mixins as functions that take arguments
+    @include circle(50px, red);
+
+
+    color: yellow;
+}
+
+.circleTwo{
+    @include circle(250px, green);
+    color: aqua;
+
+    > h1{
+        text-align:center;
+        position:relative;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+    }
+}

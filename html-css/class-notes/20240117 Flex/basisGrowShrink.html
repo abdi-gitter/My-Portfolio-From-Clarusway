@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basis, Grow, and Shrink</title>
+
+    <style>
+        /* 
+            flex-basis is the initial size of a flex item (child of a flex container)
+            if we are in a row, flex-basis is referring to the width
+            if we are in a column, flex-basis is the height
+            default value is auto
+            we can use any valid css unit of measurement
+        */
+
+        /* 
+            flex-grow is a number that determines how much of the remaining space in the flex container
+            should be assigned to the item, relative to the other items in the container
+        */
+
+        /* 
+            flex-shrink is a number that determines how much the item will shrink relative to the other items
+            in the container when there isn't enough space
+        */
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        .container{
+            display:flex;
+            /* flex-direction:row; */
+            /* flex-wrap:nowrap; */
+            width:100%;
+            justify-content: space-evenly;
+        }
+
+        .container>div{
+            /* width:100%; */
+            height:100px;
+            background-color: red;
+            border: 2px solid blue;
+        }
+
+        #one{
+            flex-basis: 100px;
+            flex-grow: 2;
+            flex-shrink: 2
+        }
+        #two{
+            flex-basis: 100px;
+            flex-grow:1;
+            flex-shrink:1;
+        }
+        #three{
+            flex-basis: 100px;
+            flex-grow:1;
+            flex-shrink:1;
+        }
+        #four{
+            flex-basis: 100px;
+            flex-grow:1;
+            flex-shrink:1;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div id="one">1</div>
+        <div id="two">2</div>
+        <div id="three">3</div>
+        <div id="four">4</div>
+    </div>
+</body>
+</html>

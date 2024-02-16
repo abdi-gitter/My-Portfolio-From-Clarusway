@@ -1,0 +1,45 @@
+h3 {
+  color: magenta;
+  background-color: black;
+}
+
+:root {
+  --variable: #fff;
+}
+
+body {
+  background-color: #000;
+}
+body .main {
+  padding: 25px;
+  width: 50%;
+  margin: 50px auto;
+  text-align: center;
+  background-color: rgb(4, 63, 4);
+}
+body .main > h1 {
+  color: white;
+}
+body .main p {
+  color: aqua;
+}
+body .main h1 + p {
+  color: red;
+}
+body .main a {
+  color: white;
+  text-decoration: none;
+}
+body .main a:hover {
+  color: yellow;
+}
+body .main p::first-letter {
+  font-size: 2em;
+}
+@media (max-width: 600px) {
+  body .main {
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        body{
+            background-color: skyblue;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .card{
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            background-color: rgb(178, 224, 150);
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // ABDISA!
+        // Your array of plants is in a json file!
+        // we need to import the json file, and parse it to get the array of plants converted to a javascript array
+        // to do this, we put the json file in the same directory as our html file
+        // to import the json file, we can do this:
+        // import * as jsonData from './path/to/json_data.json';
+        // then we can access the array of plants like this:
+        // jsonData[0]
+        // array of plants:
+        const plants = [
+            {
+                name: "Rose",
+                color: "Red",
+                desc: "A beautiful flower",
+                imgUrl: "https://www.aljazeera.com/wp-content/uploads/2021/02/roses.jpg"
+            },
+            {
+                name: "Sunflower",
+                color: "Yellow",
+                desc: "A beautiful flower 2",
+                imgUrl: "https://www.almanac.com/sites/default/files/styles/or/public/image_nodes/sunflower-1627193_1920.jpg"
+            },
+            {
+                name: "Lily",
+                color: "White",
+                desc: "A beautiful flower 3",
+                imgUrl: "https://bouqs.com/blog/wp-content/uploads/2023/08/lilly-8094912_1280-min-1080x720.png"
+            }
+        ]
+
+        const h1 = document.createElement('h1')
+        // add text content to our H1:
+        h1.textContent = "Plants List."
+        // add a class:
+        h1.classList.add('red')
+        // Adding an attribute:
+        h1.setAttribute("id", "heading1")
+        // remove an attribute:
+        h1.removeAttribute("id")
+
+        document.body.appendChild(h1)
+
+        // document.write is a method to write content directly to the body.
+        // It is not recommended to use this method because it can overwrite the existing content.
+        // it also does not wrap our content in an element
+        // document.write("HELLO")
+
+        // make a container for plant cards:
+        const container = document.createElement('div')
+        container.classList.add('container')
+
+        // loop through the plants array and create a card for each plant:
+        for(let i = 0; i < plants.length; i++){
+            // here the plant is plants[i]
+            const plant = plants[i]
+            // make a card container for the plant:
+            const card = document.createElement('div')
+            card.classList.add('card')
+
+            // make the title:
+            const title = document.createElement('h2')
+            // set the text content of the title:
+            title.textContent = plant.name
+            // append the title to the card:
+            card.appendChild(title)
+
+            // make the image:
+            const img = document.createElement('img')
+            // set the src attribute of the image:
+            img.src = plant.imgUrl
+            // fix the width of the image:
+            img.style.width = "200px"
+            // append the image to the card:
+            card.appendChild(img)
+
+            // add the color:
+            const color = document.createElement('p')
+            color.textContent = `Color: ${plant.color}`
+            // set the color of this paragraph to match the color of the plant!
+            color.style.color = plant.color
+            if(color.style.color === "white"){
+                color.style.backgroundColor = "black"
+            }
+            card.appendChild(color)
+
+            // add the description:
+            const desc = document.createElement('p')
+            desc.textContent = plant.desc
+            card.appendChild(desc)
+
+            // append the card to the container:
+            container.appendChild(card)
+        }
+
+        // append the container to the body:
+        document.body.appendChild(container)
+
+
+        // I need to make a container to hold the cards
+        const container2 = document.createElement('div')
+        // Then I need to loop through the plants array and create a card for each plant
+        // Each card should have a title, an image, a color, and a description
+        // I should append each card to the container
+        // Then I should append the container to the body
+
+
+
+    </script>
+</body>
+</html>

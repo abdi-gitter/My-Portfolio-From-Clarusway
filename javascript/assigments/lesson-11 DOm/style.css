@@ -1,0 +1,55 @@
+body {
+  background-color: #909090;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 20vh;
+  margin: 0.3rem auto;
+}
+
+.bg {
+  border: 3px solid slategray;
+  background-color: yellow;
+}
+
+.palindrome {
+  border: 3px dotted red;
+  flex-direction: column;
+}
+
+.password {
+  flex-direction: column;
+  border: 3px dashed peru;
+}
+
+button {
+  height: 2rem;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+input {
+  height: 2rem;
+  width: 12rem;
+  margin: 0.4rem;
+  text-indent: 0.3rem;
+}
+
+p {
+  margin-top: 0.3rem;
+  font-size: 1.4rem;
+}
+
+#palindrome {
+  text-transform: capitalize;
+}
+
+.counter {
+  flex-direction: column;
+  background-color: cornflowerblue;
+  color: white;
+}

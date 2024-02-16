@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Every Nth Child Example</title>
+</head>
+
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 5</li>
+        <li>Item 5</li>
+        <li>Item 5</li>
+        <li>Item 5</li>
+        <li>Item 5</li>
+        <li>Item 5</li>
+        <li>Item 5</li>
+    </ul>
+
+    <script>
+        // Select every other (even) li element inside the ul
+        const evenListItems = document.querySelectorAll('ul li:nth-child(even)');
+
+        // Log the text content of every other li element
+        evenListItems.forEach((item, index) => {
+            item.style.color = 'red';
+        });
+
+        const list = document.querySelector('ul')
+        for(let i = 0; i < 10; i++){
+            const li = document.createElement('li')
+            li.textContent = `Item ${i + 1}`
+            list.appendChild(li)
+        }
+    </script>
+</body>
+
+</html>

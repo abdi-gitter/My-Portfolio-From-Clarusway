@@ -1,0 +1,181 @@
+@import './theme.css';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--white);
+  font-family: var(--ff-roboto);
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  width: 200px;
+}
+
+button {
+  border: 2px solid var(--red-dark);
+  border-radius: 5px;
+  box-shadow: var(--shadow-light);
+  padding: 1rem 1.2rem;
+  font-family: var(--ff-yeon);
+  font-size: var(--fs-lg);
+  margin: 1rem 0.5rem;
+  white-space: nowrap;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transform: scale(0.97);
+}
+
+.btn-light {
+  color: var(--red-dark);
+  background-color: var(--white);
+}
+
+.btn-dark {
+  background-color: var(--red-dark);
+  color: var(--white);
+}
+
+nav.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem 2rem;
+  padding: 1rem;
+  line-height: var(--line-h-xl);
+}
+
+nav.hero section {
+  flex: 1;
+}
+
+nav.hero h1 {
+  font-size: var(--fs-xl);
+}
+
+nav.hero p {
+  font-size: var(--fs-md);
+}
+
+nav.hero img {
+  width: 40%;
+  max-width: 400px;
+  min-width: 300px;
+  flex: 1;
+}
+
+main .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-light);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+main .card:nth-child(odd) {
+  flex-direction: row;
+}
+
+main .card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+main .card img {
+  width: 50%;
+  border-radius: 20px;
+  box-shadow: var(--shadow-light);
+}
+
+main .card article {
+  line-height: var(--line-h-xl);
+  text-align: justify;
+}
+
+
+
+/* work with anything below 1201px: */
+/* This will work from 1200 to 701px: */
+@media screen and (max-width: 1200px){
+  body{
+    background-color: var(--grey-10);
+  }
+}
+/* once we get smaller than 701px, this 
+media query will apply: */
+/* using 700px for phones */
+@media screen and (max-width: 700px){
+  body{
+    background-color: var(--blue-light-5);
+  }
+  header{
+    flex-direction:column;
+    align-items: center;
+    text-align:center;
+  }
+  .hero{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+
+  .hero>section{
+    order:2;
+  }
+
+  .hero>img{
+    order:1;
+  }
+
+  .card>img{
+    display:none;
+  }
+
+  .card{
+    background-size:cover;
+    background-position: 50% 50%;
+  }
+
+  #courses{
+    background-image: url('./images/courses.jpg');
+  }
+  .card article{
+    background-color: rgba(0,0,0,0.3);
+    color:white;
+    padding: 20px;
+    border-radius:10px;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: var(--shadow-light);
+  }
+
+  #learning{
+    background-image:url('./images/learning.jpg');
+  }
+
+  #alumni{
+    background-image:url('./images/meet.jpg');
+  }
+
+}

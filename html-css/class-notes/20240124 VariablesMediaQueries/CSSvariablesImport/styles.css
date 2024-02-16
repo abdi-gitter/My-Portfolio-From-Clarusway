@@ -1,0 +1,9 @@
+@import './variables.css';
+
+body {
+    background-color: var(--primary);
+}
+
+h1 {
+    color: var(--mid);
+}

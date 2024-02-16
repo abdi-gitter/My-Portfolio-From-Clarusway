@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- The accordion is wrapped in an accordion class.  TODO: why does it have an ID? -->
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+
+        <!-- Each accordion item has the accordion item class -->
+        <div class="accordion-item">
+
+            <!-- Each accordion item has an accordion header class -->
+            <h2 class="accordion-header">
+                <!-- This button is the actual header of the accordion item -->
+                <!-- 
+                    data-bs-toggle is the attribute that makes the accordion work
+                        - this is the function that opens/closes the accordion/collapse
+                            by toggling the collapse class
+                    data-bs-target is the attribute that tells the accordion WHAT to COLLAPSE
+                 -->
+                <button class="accordion-button" type="button"
+
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne"
+
+                    aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    Accordion Item #1
+                </button>
+            </h2>
+
+            <!-- 
+                This div is the actual accordion body
+                    - it has the accordion body class
+                    - it has an ID that matches the data-bs-target of the accordion header
+                    - it has the collapse class - this is what makes the accordion collapse
+                    - it has the show class - this is what makes the accordion open by default
+
+                    SIMPLY PUT:
+                        The data-bs-target value needs to be the ID of the associated accordion body
+             -->
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                <!-- the accordion body is just that! the body of our accordion item -->
+                <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the
+                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                    this with custom CSS or overriding our default variables. It's also worth noting that just about any
+                    HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Second accordion item: -->
+        <div class="accordion-item">
+
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#chasesAccordionItem" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    Accordion Item #2
+                </button>
+            </h2>
+
+            <div id="chasesAccordionItem" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
+                    collapse plugin adds the appropriate classes that we use to style each element. These classes
+                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
+                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
+                    overflow.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseThree">
+                    Accordion Item #3
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                    collapse plugin adds the appropriate classes that we use to style each element. These classes
+                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
+                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
+                    overflow.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            /* background-color: black; */
+        }
+
+        #one {
+            width: 40%;
+            height: 75%;
+            background-color: white;
+            border: 2px solid black;
+        }
+
+        #two {
+            width: 40%;
+            height: 75%;
+            background-color: black;
+            border: 2px solid white;
+        }
+
+        @media screen and (max-width:480px) {
+            body {
+                background-color: red;
+                flex-direction: column;
+            }
+
+            #one,#two{
+                width:75%;
+                height:40%;
+            }
+        }
+
+        @media screen and (min-width:481px) {
+            body {
+                background-color: green;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            body {
+                background-color: blue;
+            }
+        }
+
+        @media screen and (min-width:1024px) {
+            body {
+                background-color: yellow;
+            }
+        }
+
+        @media screen and (min-width:1200px) {
+            body {
+                background-color: blueviolet;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="one"></div>
+    <div id="two"></div>
+</body>
+
+</html>

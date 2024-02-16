@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benchmarking</title>
+</head>
+
+<body>
+    <h1 id="benchmarkElement"></h1>
+
+    <script>
+        function benchmarkInnerHTML() {
+            const element = document.getElementById("benchmarkElement");
+            const startTime = performance.now();
+
+            // Benchmarking innerHTML
+            for (let i = 0; i < 1000; i++) {
+                element.innerHTML = "New content for innerHTML benchmark";
+            }
+
+            const endTime = performance.now();
+            const elapsedTime = endTime - startTime;
+
+            console.log(`innerHTML Time taken: ${elapsedTime} milliseconds`);
+        }
+
+        function benchmarkTextContent() {
+            const element = document.getElementById("benchmarkElement");
+            const startTime = performance.now();
+
+            // Benchmarking textContent
+            for (let i = 0; i < 1000; i++) {
+                element.textContent = "New content for textContent benchmark";
+            }
+
+            const endTime = performance.now();
+            const elapsedTime = endTime - startTime;
+
+            console.log(`textContent Time taken: ${elapsedTime} milliseconds`);
+        }
+
+        function benchmarkInnerText() {
+            const element = document.getElementById("benchmarkElement");
+            const startTime = performance.now();
+
+            // Benchmarking innerText
+            for (let i = 0; i < 1000; i++) {
+                element.innerText = "New content for innerText benchmark";
+            }
+
+            const endTime = performance.now();
+            const elapsedTime = endTime - startTime;
+
+            console.log(`innerText Time taken: ${elapsedTime} milliseconds`);
+        }
+
+        // Run the benchmarks
+        benchmarkInnerHTML();
+        benchmarkTextContent();
+        benchmarkInnerText();
+
+    </script>
+</body>
+
+</html>

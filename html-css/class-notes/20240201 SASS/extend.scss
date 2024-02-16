@@ -1,0 +1,15 @@
+.extend {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    color: white;
+    border:2px solid magenta;
+}
+
+.extended{
+    @extend .extend;
+    
+    border-radius: 5px;
+    margin:5px;
+    box-shadow: 2px 2px 5px 1px black;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Heading</h1>
+    <p>Paragraph</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        // dom traversal methods!
+
+        // 1. parentNode (parentElement)
+        // 2. firstChild (firstElementChild)
+        // 3. lastChild (lastElementChild)
+        // 4. nextSibling (nextElementSibling)
+        // 5. previousSibling (previousElementSibling)
+
+        // Reference to H1 element:
+        const heading = document.querySelector('h1');
+        // Reference to the paragraph element using the nextElementSibling property:
+        const paragraph = heading.nextElementSibling;
+        paragraph.style.color = 'red';
+
+        // Reference to the unordered list element using the nextElementSibling property:
+        const list = paragraph.nextElementSibling;
+
+        // Reference to the first list (child) item:
+        const firstItem = list.firstElementChild;
+        firstItem.style.color = 'blue';
+
+        // Reference to the last list (child) item:
+        const lastItem = list.lastElementChild;
+        lastItem.style.color = 'green';
+
+        // reference to the body
+        // last list item -> list -> body
+        lastItem.parentElement.parentElement.style.backgroundColor = 'yellow';
+
+    </script>
+</body>
+</html>

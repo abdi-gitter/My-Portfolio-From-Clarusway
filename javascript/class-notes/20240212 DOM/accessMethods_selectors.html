@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Access Methods!</title>
+    <style>
+        #one {
+            color: red;
+        }
+
+        .two {
+            color: magenta;
+        }
+
+        h3{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="one">Hello World!</h1>
+    <h1 id="one">Hello Again</h1>
+
+    <p class="two">class example</p>
+    <p class="two">class example</p>
+    <p class="two">class example</p>
+    <p class="two">class example</p>
+    <p class="two">class example</p>
+    <p class="two">class example</p>
+
+    <h3 name="h3">one</h3>
+    <h3 name="h3">two</h3>
+    <h3 name="h3">three</h3>
+
+    <h2 class="h2">h2 one</h2>
+    <h2 class="h2">h2 two</h2>
+    <h2 class="h2">h2 three</h2>
+
+    <script>
+        var one = document.getElementById('one');
+        one.style.color = 'blue';
+
+        var two = document.getElementsByClassName('two');
+        for (var i = 0; i < two.length; i++) {
+            two[i].style.color = 'green';
+            two[i].style.fontSize = '20px';
+            two[i].style.backgroundColor = 'yellow';
+            two[i].textContent = i+1
+        }
+        // two.style.color = "yellow"
+
+        var h3 = document.getElementsByName('h3');
+        for (var i = 0; i < h3.length; i++) {
+            h3[i].style.color = 'purple';
+            if(h3[i].textContent == 'two') {
+                h3[i].style.color = 'red';
+            }
+        }
+
+        document.getElementsByTagName('h1')[1].style.color = 'orange';
+
+        // when using querySelector, it will only select the first element
+        document.querySelector('.h2').style.color = "magenta"
+
+        // to select all elements, use querySelectorAll
+        document.querySelectorAll('.h2')[2].style.color = "green"
+    </script>
+</body>
+</html>

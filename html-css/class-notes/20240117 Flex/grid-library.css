@@ -1,0 +1,136 @@
+/* ROW */
+.row{
+    display:flex;
+    flex-direction: row;
+}
+
+.col{
+    display:flex;
+    flex-direction: column;
+}
+
+/* COLUMNS */
+.col-12{
+    width:100%;
+}
+
+.col-11{
+    width:91.6666666667%;
+}
+
+.col-10{
+    width:83.3333333333%;
+}
+
+.col-9{
+    width:75%;
+}
+
+.col-8{
+    width:66.6666666667%;
+}
+
+.col-7{
+    width:58.3333333333%;
+}
+
+.col-6{
+    width:50%;
+}
+
+.col-5{
+    width:41.6666666667%;
+}
+
+.col-4{
+    width:33.3333333333%;
+}
+
+.col-3{
+    width:25%;
+}
+
+.col-2{
+    width:16.6666666667%;
+}
+
+.col-1{
+    width:8.3333333333%;
+}
+/* END COLUMNS */
+
+/* END ROW */
+
+/* Padding: */
+.p-0{
+    padding:0;
+}
+
+.p-1{
+    padding:.25rem;
+}
+
+.p-2{
+    padding:.5rem;
+}
+
+.p-3{
+    padding:.75rem;
+}
+
+.p-4{
+    padding:1rem;
+}
+
+/* Margin */
+.m-0{
+    margin:0;
+}
+
+.m-1{
+    margin:.25rem;
+}
+
+.m-2{
+    margin:.5rem;
+}
+
+.m-3{
+    margin:.75rem;
+}
+
+.m-4{
+    margin:1rem;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.jcc{
+    justify-content:center;
+}
+
+.aic{
+    align-items:center;
+}
+
+.bgred{
+    background-color:red;
+}
+
+.bgblue{
+    background-color:blue;
+}
+
+.bggreen{
+    background-color:green;
+}
+
+.bgyellow{
+    background-color:yellow;
+}
+
+.h-100{
+    height:100%;
+}

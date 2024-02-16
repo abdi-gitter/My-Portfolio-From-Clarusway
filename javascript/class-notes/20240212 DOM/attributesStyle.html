@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting and changing attributes and styles!</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+        .fs-50{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading" name="heading1" class="red">Hello!</h1>
+
+    <script>
+        const h1 = document.getElementById('heading'); //reference to h1
+        /* attributes! */
+        /* 1. getAttribute() */
+        console.log(h1.getAttribute('id')); // heading
+        /* 2. setAttribute() */
+        // the problem with setAttribute is that it overwrites the existing class
+        // we are not adding a class, we are completely changing the value for this attribute
+        h1.setAttribute('class', 'blue'); // changes the class to blue
+            //  if you want to add a class, you can use classlist.add()
+            // We shouldn't use setAttribute to add or remove a class!!!
+        h1.classList.add('fs-50'); // adds the class fs-50
+            // classlist.remove()
+            // h1.classList.remove('fs-50'); // removes the class fs-50
+            // classlist.toggle()
+        h1.classList.toggle('fs-50'); // toggles the class fs-50
+
+        /* 3. removeAttribute() */
+        h1.removeAttribute('name'); // removes the name attribute
+        /* 4. hasAttribute() */
+        console.log(h1.hasAttribute('name')); // false
+        /* 5. attributes */
+        console.log(h1.attributes); // NamedNodeMap {0: id, 1: class, 2: style, id: id, class: class, style: style, length: 3}
+
+    </script>
+</body>
+</html>

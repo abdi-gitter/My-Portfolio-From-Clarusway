@@ -1,0 +1,64 @@
+//  IF ELSE:
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+$test: 1;
+
+.main{
+    @if $test >= 3{
+        background-color:rgb(193, 128, 128);
+        height: 100px * $test;
+        width: 100px * $test;
+    } @else if $test >= 2{
+        background-color:rgb(107, 107, 194);
+        height: 100px * $test;
+        width: 100px * $test;
+    } @else{
+        background-color:rgb(133, 181, 133);
+        height: 100px * $test;
+        width: 100px * $test;
+    }
+}
+
+// FOR LOOP:
+$tableRows: 8;
+// this is how we make an array in scss:
+$tableRowColors: rgb(106, 0, 0), rgb(0, 93, 0), rgb(0, 0, 89), rgb(92, 92, 0), rgb(107, 49, 107),rgb(21, 87, 87), rgb(86, 86, 86), rgb(0, 0, 0);
+@for $i from 1 through $tableRows{
+    tr:nth-child(#{$i}){
+        background-color: nth($tableRowColors, $i);
+    }
+}
+
+tr{
+    color:white;
+}
+
+// WHILE LOOP:
+$count:1;
+@while $count<7 {
+    .social#{$count}{
+        // .social1, .social2, .social3, .social4, .social5, .social6
+        width: 10%;
+        height: 20px ;
+        background-color: adjust-hue(#456, $count*30deg);
+        color: adjust-hue(rgb(0, 255, 170), $count*(-30deg));
+    }
+    $count:$count+1;
+}
+
+.socialBoxes{
+    // Whenever we use the & symbol, it just 
+    // refers to the parent selector
+    &Heading{
+        // .socialBoxes_heading
+        // The & symbol in the context of Sass is a 
+        // reference to the parent selector, 
+        // and the overall syntax you're using is part of the Sass language.
+        font-size: 20px;
+        color: #456;
+    }
+}

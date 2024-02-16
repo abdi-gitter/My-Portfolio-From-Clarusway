@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <p class="text-start">Start aligned text on all viewport sizes.</p>
+    <p class="text-center">Center aligned text on all viewport sizes.</p>
+    <p class="text-end">End aligned text on all viewport sizes.</p>
+
+    <p class="text-center text-sm-end">End aligned text on viewports sized SM (small) or wider.</p>
+    <p class="text-md-end">End aligned text on viewports sized MD (medium) or wider.</p>
+    <p class="text-lg-end">End aligned text on viewports sized LG (large) or wider.</p>
+    <p class="text-xl-end">End aligned text on viewports sized XL (extra large) or wider.</p>
+    <p class="text-xxl-end">End aligned text on viewports sized XXL (extra extra large) or wider.</p>
+
+    <!-- floats: -->
+    <div class="bg-primary float-start" style="width: 100px; height:100px;"></div>
+    <div class="bg-secondary float-end" style="width: 100px; height:100px;"></div>
+
+    <div class="bg-danger" style="width: 100%; height:100px;"></div>
+
+    <br><br>
+
+    <div class="clearfix">
+        <!-- 
+            The clearfix class is used to create a container for floating elements.
+            The clearfix class uses the following CSS:
+            .clearfix::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+         -->
+        <div class="bg-primary float-start" style="width: 100px; height:100px;"></div>
+        <div class="bg-secondary float-end" style="width: 100px; height:100px;"></div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+:root{
+    --black: black;
+    --red: red;
+    --green: green;
+    --blue: blue;
+    --yellow: yellow;
+    --orange: orange;
+    --purple: purple;
+}
+
+body{
+    display:flex;
+    margin:0;
+    padding:0;
+    height:100vh;
+}

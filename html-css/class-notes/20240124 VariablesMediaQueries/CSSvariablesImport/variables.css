@@ -1,0 +1,16 @@
+/* Defining variables: */
+:root{
+    --primary: #012030;
+    --secondary: #13678A;
+    --mid: #45C4B0;
+    --light: #9AEBA3;
+    --lighter: #DAFDBA;
+}
+
+/* Using variables: */
+
+/* 
+    body{
+        background-color: var(--primary);
+    }
+*/

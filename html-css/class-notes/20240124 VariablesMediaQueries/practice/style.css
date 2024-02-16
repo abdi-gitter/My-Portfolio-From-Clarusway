@@ -1,0 +1,62 @@
+@import './variables.css';
+
+body{
+    background-color: var(--black);
+}
+
+.container{
+    background-color: var(--blue);
+    height: 75%;
+    width: 80%;
+    margin:auto;
+
+    display: flex;
+    /* DEFAULT FLEX DIRECTION IS ROW! */
+    flex-direction:row; 
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius:5px;
+
+    /* TRANSITIONS WORK! */
+    transition: all .5s linear;
+}
+
+.child{
+    height:80%;
+    width: 40%;
+    border-radius: 5px;
+}
+
+.one{
+    background-color: var(--yellow);
+}
+
+.two{
+    background-color: var(--green);
+}
+
+@media screen and (max-width: 600px){
+    /* these properties will be applied 
+        if the screen is less than 600px wide:
+    */
+    .container{
+        flex-direction:column;
+        height: 90%;
+        width: 70%;
+        border-radius:15px;
+    }
+
+    .child{
+        width:80%;
+        height:45%;
+        border-radius:15px;
+    }
+
+    .one{
+        background-color: var(--red);
+    }
+
+    .two{
+        background-color: var(--purple);
+    }
+}

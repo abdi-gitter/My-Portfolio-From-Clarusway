@@ -1,0 +1,6 @@
+@mixin myBox($bgColor, $color) {
+    background-color: $bgColor;
+    color: $color;
+    height:100px;
+    width:100px;
+}

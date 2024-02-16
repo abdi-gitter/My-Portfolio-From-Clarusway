@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Content!</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>INSERT CONTENT</h1>
+        <p>INSERT CONTENT</p>
+    </div>
+
+   <script>
+    // DOM methods for changing content:
+        // 1. innerHTML
+            // - changes/sets content of an element (including HTML tags)
+            // - takes into account the CSS styling and may provide a "cleaned up" version of the text that is visible to the user.
+            // - this is better for when we want to change the content and the HTML nested inside the element
+            // - this is slower and can be a security risk if we are not careful
+
+        // 2. textContent
+            // - changes/sets content of an element (excluding HTML tags)
+            // - best practice, doesn't consider styling and doesn't trigger reflows or repaints FASTER!
+            // - this is better for when we want to change the content
+
+        // 3. innerText
+            // - changes/sets content of an element (including HTML tags)
+            // - takes into account the CSS styling and may provide a "cleaned up" version of the text that is visible to the user.
+            // - This is better for when we want more readable content, 
+            // - removes hidden elements and styles
+
+        // 1. innerHTML
+        var main = document.getElementById('main');
+        // main.innerHTML = "Changed Content";
+        const name = 'Abdisa'
+
+        main.innerHTML = `
+            <h1>Hello ${name}!</h1>
+        `
+
+        // 2. textContent (best practice, doesn't consider styling and doesn't trigger reflows or repaints FASTER!)
+        console.log(main.textContent.length);
+        console.log("------ TEXT CONTENT ------")
+        for (var i = 0; i < main.textContent.length; i++) {
+            console.log(main.textContent[i]);
+        }
+
+        // 3. innerText
+        console.log(main.innerText.length);
+        console.log("------ INNER TEXT ------")
+        for (var i = 0; i < main.innerText.length; i++) {
+            console.log(main.innerText[i]);
+        }
+
+        const p = document.querySelector('p');
+        p.innerText = "This is a new paragraph";
+
+        /*
+
+        Handling of Styles and Layout:
+
+        innerText: 
+            It returns the visible text content of an element, excluding any hidden or styled elements. 
+            It takes into account the CSS styling and may provide a "cleaned up" version of the 
+            text that is visible to the user.
+        textContent: It returns all text content within an element, including both visible and hidden text. 
+        It doesn't consider the styling and provides a raw representation of the text as it is in the DOM.
+
+        Performance:
+        innerText: 
+            Since it considers styling and layout, it might trigger reflows and repaints, 
+            potentially making it slower in terms of performance, 
+            especially if used in a loop or on large documents.
+
+        textContent: 
+            It usually performs better because it doesn't consider styling and doesn't trigger reflows or repaints.
+        */
+   </script>
+</body>
+</html>

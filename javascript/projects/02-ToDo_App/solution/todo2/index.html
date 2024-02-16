@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="overlay">
+      <section id="addCard">
+        <h2>ADD TASK</h2>
+        <form>
+          <input type="text" />
+          <div>
+            <button type="submit">ADD</button>
+            <button type="reset">CANCEL</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <!-- navigation -->
+    <nav>
+      <div class="container">
+        <h1>Tasks App</h1>
+        <input type="search" placeholder="Search . . ." />
+        <button>ADD</button>
+      </div>
+    </nav>
+
+    <!-- main -->
+
+    <main>
+      <div class="container">
+        <section id="stats">
+          <div class="card">
+            <h2>Completed Tasks</h2>
+            <div>
+              <p>0</p>
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+          <div class="card">
+            <h2>Incompleted Tasks</h2>
+            <div>
+              <p>0</p>
+              <i class="fa-solid fa-clipboard-list"></i>
+            </div>
+          </div>
+          <div class="card">
+            <h2>Total Tasks</h2>
+            <div>
+              <p>0</p>
+              <i class="fa-solid fa-chart-simple"></i>
+            </div>
+          </div>
+        </section>
+
+        <section id="tasks" class="container">
+          <h2>Your Tasks</h2>
+          <div class="task" id="task-1698951526061" style="background: white">
+            <input type="checkbox" class="check" />
+            <div class="task-details">
+              <h3 class="task-title">Study React</h3>
+              <small> 11/2/2023</small>
+            </div>
+            <div class="actions">
+              <button><i class="fa-solid fa-pen-to-square"></i></button>
+              <button class="delete-btn">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="task" id="task-1698951526061" style="background: white">
+            <input type="checkbox" class="check" />
+            <div class="task-details">
+              <h3 class="task-title">Study CSS</h3>
+              <small> 11/2/2023</small>
+            </div>
+            <div class="actions">
+              <button><i class="fa-solid fa-pen-to-square"></i></button>
+              <button class="delete-btn">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

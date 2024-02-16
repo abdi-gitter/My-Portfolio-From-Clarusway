@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            width:200px;
+            flex-wrap: wrap;
+            /* position: absolute; */
+            top: 0;
+            left: 0;
+            display: flex;
+            height: 200px;
+            /* Set a fixed height for illustration */
+            border: 1px solid #7f7f7f;
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+        }
+
+        .align-items>.item {
+            border: 1px solid red;
+        }
+
+        .align-content>.item {
+            border: 1px solid blue;
+        }
+
+        /* Align items */
+        .align-items {
+            align-items:center;
+        }
+
+        /* Align content */
+        .align-content {
+            align-content: center;
+        }
+
+        p{
+            text-align:center;
+        }
+
+        .align-items>.item>p{
+            color: red;
+        }
+
+        .align-content>.item>p{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>align-items Example</h2>
+    <div class="container align-items">
+        <div class="item"><p>1</p></div>
+        <div class="item"><p>2</p></div>
+        <div class="item"><p>3</p></div>
+        <div class="item"><p>4</p></div>
+        <div class="item"><p>5</p></div>
+        <div class="item"><p>6</p></div>
+    </div>
+
+    <h2>align-content Example</h2>
+    <div class="container align-content">
+        <div class="item"><p>1</p></div>
+        <div class="item"><p>2</p></div>
+        <div class="item"><p>3</p></div>
+        <div class="item"><p>4</p></div>
+        <div class="item"><p>5</p></div>
+        <div class="item"><p>6</p></div>
+    </div>
+
+</body>
+
+</html>

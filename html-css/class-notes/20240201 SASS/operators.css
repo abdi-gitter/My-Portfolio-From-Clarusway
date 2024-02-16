@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  background-color: rgb(133, 181, 133);
+  height: 100px;
+  width: 100px;
+}
+
+tr:nth-child(1) {
+  background-color: rgb(106, 0, 0);
+}
+
+tr:nth-child(2) {
+  background-color: rgb(0, 93, 0);
+}
+
+tr:nth-child(3) {
+  background-color: rgb(0, 0, 89);
+}
+
+tr:nth-child(4) {
+  background-color: rgb(92, 92, 0);
+}
+
+tr:nth-child(5) {
+  background-color: rgb(107, 49, 107);
+}
+
+tr:nth-child(6) {
+  background-color: rgb(21, 87, 87);
+}
+
+tr:nth-child(7) {
+  background-color: rgb(86, 86, 86);
+}
+
+tr:nth-child(8) {
+  background-color: rgb(0, 0, 0);
+}
+
+tr {
+  color: white;
+}
+
+.social1 {
+  width: 10%;
+  height: 20px;
+  background-color: #444466;
+  color: #00ff2b;
+}
+
+.social2 {
+  width: 10%;
+  height: 20px;
+  background-color: #554466;
+  color: #55ff00;
+}
+
+.social3 {
+  width: 10%;
+  height: 20px;
+  background-color: #664466;
+  color: #d5ff00;
+}
+
+.social4 {
+  width: 10%;
+  height: 20px;
+  background-color: #664455;
+  color: #ffaa00;
+}
+
+.social5 {
+  width: 10%;
+  height: 20px;
+  background-color: #664444;
+  color: #ff2b00;
+}
+
+.social6 {
+  width: 10%;
+  height: 20px;
+  background-color: #665544;
+  color: #ff0055;
+}
+
+.socialBoxesHeading {
+  font-size: 20px;
+  color: #456;
+}
+
+/*# sourceMappingURL=operators.css.map */

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS in JS</title>
+</head>
+<body>
+    <h1 id="heading">Heading!!!</h1>
+
+    <script>
+
+        const style = {
+            textAlign: "center",
+            color: "green",
+            fontSize: "50px",
+            border: "5px dotted blue",
+            boxShadow: "2px 2px 4px 3px black"
+        }
+
+        const heading = document.getElementById('heading')
+        heading.style.color = "red"
+
+        const shadow = `5px 5px 5px rgba(0, 0, 0, 1)`
+        heading.style.textShadow = shadow
+
+        heading.style.border = '2px solid black'
+        heading.style.borderRadius = '10px'
+        heading.style.padding = '10px'
+
+        heading.style.textAlign = 'center'
+
+
+        // heading.style = style
+        // to assign a whole style object to a style for an element,
+        // This is not recommended because it will overwrite the existing style object
+        // object.assign is a method that takes two objects and merges them together
+        Object.assign(heading.style, style)
+    </script>
+</body>
+</html>

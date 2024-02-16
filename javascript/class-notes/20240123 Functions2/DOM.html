@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+</head>
+<body>
+    <h1>Hello</h1>
+
+    <input type="text" id="input">
+    <p id="output"></p>
+
+    <script>
+        // reference to the input element
+        let input = document.querySelector('#input')
+
+        // listen for input event
+        input.addEventListener('input', function(e) {
+            // get the value of the input
+            // convert it to a number
+            val = Number(e.target.value)
+
+            // multiply by 10 and display in #output element
+            document.querySelector('#output').innerText = val * 10
+        })   
+    </script>
+</body>
+</html>

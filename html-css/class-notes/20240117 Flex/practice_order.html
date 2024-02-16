@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+
+    <style>
+        .container{
+            background-color: rgba(0,0,0,.5);
+            display: flex;
+            /* row (horizontal) */
+            flex-wrap: wrap;
+            align-content:center;
+            justify-content:center;
+            height:100vh;
+            padding:50px;
+
+            /* 
+                gap is similar to margin, but it only applies to flex items
+                it is shorthand for row-gap and column-gap
+                row gap is the space between rows
+                column gap is the space between columns
+            */
+
+            /* gap:20px; */
+            row-gap:20px;
+            column-gap: 5px;
+        }
+
+        .container>div{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            /* margin: 20px; */
+            font-weight:bold;
+            font-size: 2em;
+            text-align: center;
+            gap: 20px;
+        }
+
+        #one{
+            order: 7;
+        }
+
+        #two{
+            order: 2;
+        }
+
+        #three{
+            order: 3;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div id="one">1</div>
+        <div id="two">2</div>
+        <div id="three">3</div>
+        <div id="four">4</div>
+        <div id="five">5</div>
+        <div id="six">6</div>
+        <div id="seven">7</div>
+    </div>
+</body>
+</html>

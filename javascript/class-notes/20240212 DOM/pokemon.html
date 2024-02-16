@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        // DONT WORRY ABOUT THIS STUFF RIGHT NOW!  THIS WILL ALL MAKE SENSE LATER!
+        fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
+        .then(response => response.json())
+        .then(data => {
+            // Here, your plants are available as (data)
+            // DATA IS AVAILABLE INSIDE THIS BLOCK
+            // This is where you can use the data to 
+            // create elements and add them to the DOM
+            // document.write(JSON.stringify(data));
+            console.log(data)
+            // to access plants:
+            const h1 = document.createElement('h1')
+            h1.textContent = data.name
+            document.body.appendChild(h1)
+            
+        })
+    </script>
+</body>
+</html>

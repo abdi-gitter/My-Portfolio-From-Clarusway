@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #modal{
+            display:none;
+            position:fixed;
+            background-color: lightblue;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- modal: -->
+    <div id="modal">
+        <button id="closeModal">close modal</button>
+        <h1>MODAL HEADING</h1>
+        <div style="width: 50%">
+            <h3>Modal body:</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sed suscipit illum quidem consectetur fugit minus. Quo voluptatum perspiciatis ducimus tempore quod quidem velit nemo odit id ab veritatis cum, sequi quaerat aliquid eum nam et autem sunt! Consequatur earum culpa cum aliquam ipsam saepe molestias corporis ipsa quia iusto.</p>
+        </div>
+    </div>
+
+
+    <h1>Some heading!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eum, officia fugit qui ab illum modi laborum dolorum optio aliquid molestias nostrum, et deleniti nam odio quidem. Sed ipsa dolorum eum dolores eos unde nihil adipisci, vel, repellat voluptate minus consectetur nam quo. Dolores dolore assumenda quisquam labore! Sequi, pariatur.</p>
+
+    <button id="openModal">open modal!</button>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const button = document.querySelector('#closeModal');
+        button.addEventListener('click',()=>{
+            modal.style.display = 'none';
+        })
+
+        const openModal = document.querySelector('#openModal');
+        openModal.addEventListener('click',()=>{
+            modal.style.display = 'block';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+$primary-color: #272727;
+$secondary-color: #ff652f;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin transition-ease{
+    transition: all .5s ease-in-out;
+}
+
+@function set-text-color($color){
+    @if(lightness($color) > 40%){
+        @return #000;
+    } @else{
+        @return #fff;
+    }
+}
+
+// Media queries:
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1200px;
+
+@mixin media-md{
+    @media screen and (min-width: $breakpoint-md){
+        @content;
+    }
+}
+
+@mixin media-lg{
+    @media screen and (min-width: $breakpoint-lg){
+        @content;
+    }
+}
+
+@mixin media-xl{
+    @media screen and (min-width: $breakpoint-xl){
+        @content;
+    }
+}

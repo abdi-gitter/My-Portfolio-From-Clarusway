@@ -1,0 +1,31 @@
+.one {
+  background-color: blue;
+  color: white;
+  height: 100px;
+  width: 100px;
+}
+
+.circleOne {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 50%;
+  color: yellow;
+}
+
+.circleTwo {
+  height: 250px;
+  width: 250px;
+  background-color: green;
+  border-radius: 50%;
+  color: aqua;
+}
+.circleTwo > h1 {
+  text-align: center;
+  position: relative;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+/*# sourceMappingURL=mixins.css.map */

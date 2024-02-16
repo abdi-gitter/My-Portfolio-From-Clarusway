@@ -1,0 +1,55 @@
+.title {
+  justify-content: center;
+}
+
+h1,
+h2 {
+  font-family: sans-serif;
+  text-align: center;
+  color: black;
+}
+.logo {
+  display: block;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  color: #555;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to top left, #5e0674, #c0ceee);
+  display: block;
+  justify-content: center;
+}
+
+header {
+  padding: 0.4;
+}
+
+header h1 {
+  margin: 10rem auto;
+  font-size: 5.5rem;
+  color: chartreuse;
+}
+
+header h2 {
+  margin: 10rem auto;
+  font-size: 5rem;
+  color: rgb(255, 146, 3);
+}

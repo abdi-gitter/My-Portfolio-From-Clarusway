@@ -1,0 +1,71 @@
+// Import Partials!
+@import '_partialExample.scss';
+
+// Example of CSS variables:
+:root{
+    --variable: #fff;
+}
+
+// SCSS variables:
+body{
+    // assigning a scss variable to a css variable value
+    $color: var(--variable);
+    $color2: #000;
+
+    // using the scss variable
+    background-color: $color2;
+
+    .main {
+
+        padding: 25px;
+        width: 50%;
+        margin: 50px auto;
+        text-align:center;
+        background-color: rgb(4, 63, 4);
+
+        // Nesting Child selector
+        > h1{
+            color:white;
+        }
+
+        // Nesting Descendant selector
+        p{
+            color: aqua;
+        }
+
+        // Nesting Sibling selector
+
+        h1 + p{
+            color: red;
+        }
+
+        // Nesting Pseudo-classes
+
+        a{
+            color: white;
+            text-decoration: none;
+
+            &:hover{
+                color: yellow;
+            }
+        }
+
+        // Nesting Pseudo-elements
+
+        p{
+            &::first-letter{
+                font-size: 2em;
+            }
+        }
+
+        // Nesting Media Queries
+
+        @media (max-width: 600px){
+            width: 80%;
+        }
+    }
+}
+
+// TO BUILD THE CSS FILE:
+// npm install -g sass
+// sass input.scss output.css
