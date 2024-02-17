@@ -11,6 +11,64 @@
     crossorigin="anonymous">
 </head>
 <body>
+    <h1 style="text-align: center;">Website Users</h1>
+    <div class="container">
+        <div id="card-container" class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- <div class="card h-100">
+                <img src="https://randomuser.me/api/portraits/thumb/men/84.jpg" 
+                class="card-img-top"
+                alt="user-picture"
+                />
+                <div class="card-body">
+                    <h3 class="card-title">Mr. Abdisa</h3>
+                    <p class="card-text" >Location: Canada</p>
+                    <p class="card-text">Email: abdisat.bedada@gmail.com</p>
+                    <p class="card-text">Age: 43</p>
+                </div>
+            </div> -->
+        </div>   
+    </div>
+    <script src="users.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
+
+
+
+<!-- 
+    The `<div class="row row-cols-1 row-cols-md-3 g-4"></div>` 
+    is a class attribute using Bootstrap's grid system, a popular 
+    front-end framework.
+
+Here's what each class does:
+
+- `row`: This is a Bootstrap class used for a grid container, 
+which holds and aligns the grid columns. It's a flex container 
+that wraps the columns.
+
+- `row-cols-1`: This class sets the number of columns in the
+ row to be 1 for all breakpoints except those overridden by a 
+ more specific class. It means that by default, you'll have one 
+ column stretching the full width of the row.
+
+- `row-cols-md-3`: This class changes the behavior at 
+the medium breakpoint (defined in Bootstrap, typically 
+around 768px screen width) and above. At this point, 
+it will display 3 columns per row. So, if your viewport 
+is at least as wide as the medium breakpoint, it will switch 
+from 1 column to 3 columns.
+
+- `g-4`: This class adds gutters (spacing) around the columns. 
+The size of the gutters is determined by the number following 
+the `g`. Bootstrap has a predefined scale of gutter widths, 
+and `g-4` is a value on this scale. It will add space around 
+each column within the row.
+
+In summary, when you use this `<div>`, you are setting 
+    up a responsive grid container that will have one full-width 
+    column on small screens and three equal-width columns on 
+    medium screens and larger. There will also be spacing around 
+    the columns thanks to the gutter class. If there's no 
+    content inside the div, it won't be visible, but it's 
+    structured to hold grid columns as per the classes defined.
+ -->
