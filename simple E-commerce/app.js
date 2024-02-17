@@ -19,7 +19,9 @@ alt="user-picture"
 `; */
 // generate the same html through mapping
 //here we are creating html card for every array object in the user
-const htmlArr = users.map(item => `
+const htmlArr = users.filter((item) => item.gender === 'male')
+.map(
+    (item) => `
 <div class="card h-100">
 <img src="${item.picture.medium}" 
 class="card-img-top"
